@@ -1,0 +1,305 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  line-height: 1;
+  font-family: "Roboto";
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: "";
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  color: #000;
+  font-size: 14px;
+}
+
+/*************************************************************/
+$containerWidth: 1110px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1170px;
+$pc: $containerWidth;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+/*************************************************************/
+.container {
+  max-width: $containerWidth;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 16px;
+  background-color: #eeeff1;
+}
+.design {
+  background-color: #eeeff1;
+}
+.design__title {
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.design__text {
+  max-width: 547px;
+  line-height: 24px;
+  color: #727272;
+  margin-bottom: 65px;
+}
+
+.menu__body {
+  max-width: 611px;
+  margin: 59px 0 162px 0;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  li {
+    position: relative;
+  }
+}
+
+.menu__link {
+  color: black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.button {
+  font-family: Roboto;
+  background-color: #34547a;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  padding: 20px;
+  margin: 0px 0px 141px 0px;
+  min-width: 225px;
+  min-height: 65px;
+}
+
+.active {
+  color: #34547a;
+}
+
+.about {
+  max-height: 359px;
+  text-align: center;
+}
+
+.about__body {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.project {
+  min-height: 250px;
+  background-color: #34547a;
+  padding: 100px 0;
+  color: white;
+}
+
+.project__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project__body::before {
+  content: "";
+  background-image: url("../img/project.png");
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin: 0px 10px 0px 0px;
+}
+
+.project__body li {
+  padding-top: 10px;
+  float: right;
+  max-width: 70px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.text {
+  color: #727272;
+  line-height: 20px;
+  max-width: 540px;
+  margin: 0px auto;
+}
+
+.about {
+  padding: 112px 0 100px 0;
+  max-height: 1140px;
+}
+.about__image {
+  z-index: -2;
+  position: relative;
+  margin: 57px 0px 0px 0px;
+}
+.about__image img {
+  max-width: 100%;
+}
+.about__vector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px;
+}
+
+.footer {
+  padding: 50px 0;
+  min-height: 151px;
+  background-color: #34547a;
+  color: white;
+}
+.footer__text {
+  font-size: 21px;
+  margin: 0px 0px 20px 0px;
+}
+.footer__copy {
+  font-size: 13px;
+}
+@media (max-width: $mobile) {
+  .header {
+    max-height: 300px;
+    a {
+      font-size: 18px;
+    }
+  }
+  .container {
+    text-align: center;
+    max-height: 350px;
+  }
+  .menu__list {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    li {
+      margin: 0px 0px 20px 0px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  .project__row {
+    flex-wrap: wrap;
+  }
+  .design__title {
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .design__text {
+    max-width: 500px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .title {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  .button {
+    display: block;
+    padding: 10px;
+    min-width: 100px;
+    min-height: 50px;
+    text-align: left;
+    font-size: 12px;
+  }
+}
+@media (min-width: $mobileSmall) {
+  .project__row {
+    text-align: center;
+    max-width: 500px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+}
