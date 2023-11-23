@@ -290,7 +290,9 @@ $mobileSmall: 479.98px;
     margin: 0 auto;
   }
   .project {
-    padding-top: 10px;
+    max-height: 390px;
+    display: flex;
+    padding: 0px 0px 25px 0px;
   }
   .project__row {
     flex-wrap: wrap;
