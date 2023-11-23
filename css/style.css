@@ -270,6 +270,9 @@ body {
     font-size: 30px;
     margin-bottom: 15px;
   }
+  .design__title {
+    text-align-last: left;
+  }
   .design__text {
     text-align: left;
   }
@@ -301,4 +304,4 @@ body {
   .project__body li {
     padding-top: 10px;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
