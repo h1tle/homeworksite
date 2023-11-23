@@ -172,29 +172,37 @@ $mobileSmall: 479.98px;
   max-width: 540px;
   margin: 0 auto;
 }
-
 .project {
   min-height: 250px;
   background-color: #34547a;
   padding: 100px 0;
   color: white;
 }
-
+.project__body {
+  display: flex;
+  align-items: center;
+}
 .project__row {
   display: flex;
   justify-content: space-between;
-  min-width: 141px;
 }
 
-.project__body {
-  li {
-    margin: 10px 0px 0px 0px;
-  }
+.project__body::before {
+  content: "";
   background: url("../img/project.png") left no-repeat;
   width: 50px;
   height: 50px;
-  padding-left: 60px;
-  max-width: 141px;
+  display: block;
+  background-size: contain;
+  margin: 0px 10px 0px 0px;
+}
+
+.project__body li {
+  display: inline-block;
+  max-width: 70px;
+}
+
+.container {
 }
 
 .title {
@@ -215,7 +223,6 @@ $mobileSmall: 479.98px;
   max-height: 1140px;
 }
 .about__image {
-  z-index: -2;
   position: relative;
   margin: 57px 0px 0px 0px;
 }
@@ -243,20 +250,14 @@ $mobileSmall: 479.98px;
   font-size: 13px;
 }
 @media (max-width: $mobile) {
-  .header {
-    max-height: 300px;
-    a {
-      font-size: 18px;
-    }
-  }
   .container {
     text-align: center;
+    padding: 20px;
     max-height: 350px;
   }
   .menu__list {
-    display: flex;
-    text-align: center;
     flex-direction: column;
+    text-align: center;
     li {
       margin: 0px 0px 20px 0px;
       &:last-child {
@@ -264,34 +265,35 @@ $mobileSmall: 479.98px;
       }
     }
   }
-  .design__title {
-    text-align: left;
+  .title {
     font-size: 30px;
     margin-bottom: 15px;
   }
   .design__text {
-    max-width: 500px;
     text-align: left;
+  }
+  .about {
+    padding: 80px 0 80px 0;
+  }
+  .design__text {
     margin-bottom: 20px;
   }
-  .title {
-    text-align: center;
-    font-size: 25px;
-    margin-bottom: 15px;
-  }
   .button {
-    display: block;
-    padding: 10px;
+    font-size: 13px;
     min-width: 100px;
-    min-height: 50px;
-    text-align: left;
-    font-size: 12px;
+    min-height: 30px;
+  }
+  .project__body {
+    padding: 10px;
+    margin: 0 auto;
+  }
+  .project {
+    padding-top: 10px;
   }
   .project__row {
     flex-wrap: wrap;
   }
-  .project__body {
-    max-width: 141px;
-    margin: 10px 55px 0px 0px;
+  .project__body li {
+    padding-top: 10px;
   }
 }
