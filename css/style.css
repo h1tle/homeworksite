@@ -253,6 +253,7 @@ h6 {
 .about__image {
   position: relative;
   margin: 57px 0px 0px 0px;
+  padding: 20px;
 }
 .about__image img {
   max-width: 100%;
