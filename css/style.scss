@@ -1,6 +1,7 @@
+@import url(../css/null.css);
+/*************************************************************/
 $color_1: #000;
 $color_2: #727272;
-$color_3: black;
 $color_4: white;
 $color_5: #34547a;
 $font-family_1: "Roboto";
@@ -17,119 +18,10 @@ $mobileSmall: 479.98px;
 /*************************************************************/
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 /*************************************************************/
-/*# sourceMappingURL=style.css.map */
-* {
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-  box-sizing: border-box;
-  &:before {
-    box-sizing: border-box;
-  }
-  &:after {
-    box-sizing: border-box;
-  }
+@mixin fontz($f) {
+  font-size: $f;
 }
-:focus {
-  outline: none;
-}
-:active {
-  outline: none;
-}
-a {
-  &:focus {
-    outline: none;
-  }
-  &:active {
-    outline: none;
-  }
-  text-decoration: none;
-  &:visited {
-    text-decoration: none;
-  }
-  &:hover {
-    text-decoration: none;
-  }
-}
-aside {
-  display: block;
-}
-nav {
-  display: block;
-}
-footer {
-  display: block;
-}
-header {
-  display: block;
-}
-section {
-  display: block;
-}
-html {
-  height: 100%;
-  min-width: 320px;
-}
-body {
-  height: 100%;
-  min-width: 320px;
-  line-height: 1;
-  font-family: $font-family_1;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  color: $color_1;
-  font-size: 14px;
-}
-input {
-  font-family: $font-family_1;
-  &::-ms-clear {
-    display: none;
-  }
-}
-button {
-  font-family: $font-family_1;
-  cursor: pointer;
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
-}
-textarea {
-  font-family: $font-family_1;
-}
-ul {
-  li {
-    list-style: none;
-  }
-}
-img {
-  vertical-align: top;
-}
-h1 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-h2 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-h3 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-h4 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-h5 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-h6 {
-  font-weight: inherit;
-  font-size: inherit;
-}
+/*************************************************************/
 .container {
   max-width: 1110px;
   padding: 20px;
@@ -142,7 +34,7 @@ h6 {
 .design {
   background-color: $background-color_1;
   &__title {
-    font-size: 48px;
+    @include fontz(48px);
     margin-bottom: 60px;
   }
   &__text {
@@ -166,7 +58,7 @@ h6 {
     }
   }
   &__link {
-    color: $color_3;
+    color: $color_1;
     &:hover {
       text-decoration: underline;
     }
@@ -233,7 +125,7 @@ h6 {
 
 .title {
   font-weight: 500;
-  font-size: 40px;
+  @include fontz(48px);
   margin-bottom: 50px;
 }
 .text {
