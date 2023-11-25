@@ -1,73 +1,98 @@
+/*************************************************************/
+/*************************************************************/
+
 * {
   padding: 0px;
   margin: 0px;
   border: 0px;
+  box-sizing: border-box;
 }
-
-*,
-*:before,
+*:before {
+  box-sizing: border-box;
+}
 *:after {
   box-sizing: border-box;
 }
 
-:focus,
+:focus {
+  outline: none;
+}
+
 :active {
   outline: none;
 }
 
-a:focus,
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
 a:active {
   outline: none;
 }
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
 
-aside,
-nav,
-footer,
-header,
+aside {
+  display: block;
+}
+
+nav {
+  display: block;
+}
+
+footer {
+  display: block;
+}
+
+header {
+  display: block;
+}
+
 section {
   display: block;
 }
 
-html,
-body {
+html {
   height: 100%;
   min-width: 320px;
 }
 
 body {
+  height: 100%;
+  min-width: 320px;
   line-height: 1;
   font-family: "Roboto";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  color: #000;
+  font-size: 14px;
 }
 
-input,
-button,
-textarea {
+input {
   font-family: "";
 }
-
 input::-ms-clear {
   display: none;
 }
 
 button {
+  font-family: "";
   cursor: pointer;
 }
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-a,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
+textarea {
+  font-family: "";
 }
 
 ul li {
@@ -78,23 +103,36 @@ img {
   vertical-align: top;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+h1 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+h2 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+h3 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+h4 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+h5 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
 h6 {
   font-weight: inherit;
   font-size: inherit;
 }
 
-body {
-  color: #000;
-  font-size: 14px;
-}
-
-/*************************************************************/
-/*************************************************************/
 .container {
   max-width: 1110px;
   padding: 20px;
@@ -109,12 +147,10 @@ body {
 .design {
   background-color: #eeeff1;
 }
-
 .design__title {
   font-size: 48px;
   margin-bottom: 60px;
 }
-
 .design__text {
   max-width: 547px;
   line-height: 24px;
@@ -126,7 +162,6 @@ body {
   max-width: 611px;
   margin: 59px 0 162px 0;
 }
-
 .menu__list {
   display: flex;
   justify-content: space-between;
@@ -134,7 +169,6 @@ body {
 .menu__list li {
   position: relative;
 }
-
 .menu__link {
   color: black;
 }
@@ -161,8 +195,9 @@ body {
 .about {
   max-height: 359px;
   text-align: center;
+  padding: 112px 0 100px 0;
+  max-height: 1140px;
 }
-
 .about__body {
   max-width: 540px;
   margin: 0 auto;
@@ -174,17 +209,10 @@ body {
   padding: 100px 0;
   color: white;
 }
-
 .project__body {
   display: flex;
   align-items: center;
 }
-
-.project__row {
-  display: flex;
-  justify-content: space-between;
-}
-
 .project__body::before {
   content: "";
   background: url("../img/project.png") left no-repeat;
@@ -194,10 +222,19 @@ body {
   background-size: contain;
   margin: 0px 10px 0px 0px;
 }
-
 .project__body li {
   display: inline-block;
   max-width: 70px;
+}
+.project__row {
+  display: flex;
+  justify-content: space-between;
+}
+.project__row {
+  flex-wrap: wrap;
+}
+.project__body {
+  margin: 0px 0px 10px 0px;
 }
 
 .title {
@@ -213,20 +250,13 @@ body {
   margin: 0px auto;
 }
 
-.about {
-  padding: 112px 0 100px 0;
-  max-height: 1140px;
-}
-
 .about__image {
   position: relative;
   margin: 57px 0px 0px 0px;
 }
-
 .about__image img {
   max-width: 100%;
 }
-
 .about__vector {
   position: absolute;
   top: 50%;
@@ -240,17 +270,15 @@ body {
   background-color: #34547a;
   color: white;
 }
-
 .footer__text {
   font-size: 21px;
   margin: 0px 0px 20px 0px;
 }
-
 .footer__copy {
   font-size: 13px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 479.98px) {
   .container {
     text-align: center;
     padding: 20px;
@@ -275,12 +303,10 @@ body {
   }
   .design__text {
     text-align: left;
+    margin-bottom: 20px;
   }
   .about {
     padding: 80px 0 80px 0;
-  }
-  .design__text {
-    margin-bottom: 20px;
   }
   .button {
     font-size: 13px;
@@ -293,6 +319,9 @@ body {
     padding: 10px;
     margin: 0 auto;
   }
+  .project__body li {
+    padding-top: 10px;
+  }
   .project {
     max-height: 390px;
     display: flex;
@@ -301,7 +330,4 @@ body {
   .project__row {
     flex-wrap: wrap;
   }
-  .project__body li {
-    padding-top: 10px;
-  }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
